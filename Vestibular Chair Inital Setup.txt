@@ -1,0 +1,7 @@
+Setup:
+Install NI DAQmx in the company portal
+Restart the Computer
+
+In MATLAB:
+daqvendorlist
+daqlist("ni")

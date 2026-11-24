@@ -5,14 +5,14 @@ clc
 
 dio3 = daq('ni');
 
-addoutput(dio3,'Dev3','port0/line0:7','Digital');
+addoutput(dio3,"Dev3","port0/line0:7","Digital");
 
 bvdata = logical([1 0 0 0 0 0 0 0]);
 write(dio3,double(bvdata))
 
 %Analog Input_ "Bimba output"
 ai = daq('ni');
-chans = addinput(ai,'Dev1','ai0','Voltage');
+chans = addinput(ai,'Dev3','ai0','Voltage');
 chans.TerminalConfig = 'SingleEnded';
 ai.Rate = 1000;
 
